@@ -1,0 +1,8 @@
+/.idea/*
+/build
+*.o
+*.hi
+.DS_Store
+bitrise.yml
+*.swp
+

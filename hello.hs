@@ -1,2 +1,2 @@
-main = do 
-  print "Hello world!"
+main = do
+print "Hello world!"
