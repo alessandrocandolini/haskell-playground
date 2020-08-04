@@ -11,4 +11,4 @@ None of the above are by any means specific of Haskell or strongly statically ty
 * compiler as a pour man mathematical verifier, to various degrees from basic types to liquid Haskell 
 * propositon as types, and formal proof of correctness 
 
-The repo will explore a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introducotry though. 
+The repo will explore a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though. 
