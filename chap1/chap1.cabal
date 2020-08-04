@@ -30,12 +30,14 @@ source-repository head
 common deps
   build-depends:
       base >=4.7 && <5,
-      text
+      text,
+      time 
   ghc-options: -Wall -fwarn-incomplete-patterns -fno-warn-name-shadowing
   default-language: Haskell2010
   default-extensions: 
     OverloadedStrings, 
-    TemplateHaskell
+    TemplateHaskell,
+    ExistentialQuantification
 
 library
   import: deps 
