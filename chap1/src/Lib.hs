@@ -1,7 +1,7 @@
 module Lib where
-import qualified Data.Text as T
+import Data.Text
 -- data Todo = forall a . Ord a => Todo String a 
-data Todo a = Todo T.Text a deriving (Show,Eq)
+data Todo a = Todo Text a deriving (Show,Eq)
 
 data Result = EmptyTitle | PastDueDate | Success deriving (Show,Eq)
 
