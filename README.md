@@ -14,7 +14,7 @@ None of the above are by any means specific of Haskell or strongly statically ty
 
 The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though. 
 
-## Motivations to FP
+## Motivations to FP
 
 My assumption: 
 * Writing correct software is hard, no matter what, even in simple cases. Correct here means software "that works" (tautology), ie, software that does what we were expecting it to do, software that behaves according to some expectations, based on some either formal or more often informal or unexisting specification. 
