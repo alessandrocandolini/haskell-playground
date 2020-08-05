@@ -1,8 +1,8 @@
 # haskell-playground
 
-Collection of small projects to explore and practise a bit more a number of basic topics in Haskell, particularly 
+Collection of small projects to explore conceptually and practically a number of basic topics in Haskell, particularly: 
 * type-driven business and domain modelling (eg, through ADTs and pure functions, but not only), from a naive to a more structural type-informed approach
-* strenghts of polymorphic design (eg, theorems for free), including both parametric as well as ad-hoc polymorphism (the latter via type classes)
+* strengths of polymorphic design (eg, theorems for free), including both parametric as well as ad-hoc polymorphism (the latter via type classes)
 * stronger specifications and lawful abstractions
 * basics of type level programming 
 
