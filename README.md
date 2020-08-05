@@ -6,9 +6,9 @@ Collection of small projects to explore conceptually and practically a number of
 * stronger specifications and lawful abstractions
 * basics of type level programming 
 
-None of the above are by any means specific of Haskell or strongly statically typed FP only, and most of the approaches, ways of thinking and problem solving strategies illustrated here can be (at least conceptually) ported effectively to other languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suitable to deal with those topics though. Strongly statically typed FP is also well suited for a number of increasingly in demand approaches for software correctness, including (but not limited to): 
-* property based testing 
-* compiler as a pour man mathematical verifier, to various degrees from basic types to liquid Haskell 
+None of the above are by any means specific of Haskell or strongly statically typed FP only, and most of the approaches, ways of thinking and problem solving strategies illustrated here can be (at least conceptually) ported (to some degree) to other languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suitable to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
+* property based testing (PBT)
+* compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness 
 
-The repo will explore a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though. 
+The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though. 
