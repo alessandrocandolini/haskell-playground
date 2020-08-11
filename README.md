@@ -22,7 +22,7 @@ Towards the final chapters, we will see how libraries like `servant` will allow 
 ## Motivations to FP
 
 My assumption: 
-* Writing correct software is hard, no matter what, even in simple cases. Correct here means software "that works" (tautology), ie, software that does what we were expecting it to do, software that behaves according to some expectations, based on some either formal or more often informal or unexisting specification. 
+* Writing correct software is hard, no matter what, even in simple cases. Correct here means software "that works" (tautology!), ie, software that does what we were expecting it to do, ie, software that behaves according to some expectations, where expectations are defined in terms of formal or more often informal or sometimes only available in our mind, or sometimes totally unexisting specification. 
 * Writing correct software in real life is even harder, where correctness has also to take into account limited resources, limited amount of time, speed on the marker, pre-existing legacy code, sync or async interation with other systems and/or 3rd party systems and/or libraries and frameworks, about whose behaviour we are not always sure, and where correctness might be trade for other business priorities (eg, we might need to build a system on top of existing code that is known to have issues in the backlog, or we might need to deliberately ignore certain known edge cases) 
 * Writing correct software with in presence of failures it's even more harder, when you assume that every step could fail, that you might still want to fail gracefully, and protect any database state from remaining permanently in a corrupted state. 
 
