@@ -2,7 +2,7 @@
 
 A tour of some basic topics in strongly statically-typed purely functional programming, illustrated using the Haskell programming language, particularly with emphasis on: 
 * type-driven business and domain modelling (eg, through ADTs and pure functions, but not only), from a naive to a more structural type-informed approach
-* strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural polymorphism
+* strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural (ie, the `generics` Haskell extension) polymorphism
 * how to reason in terms of stronger specifications
 * principled and lawful abstractions (eg, monadic laws, but not only)
 * basics of type-level programming 
