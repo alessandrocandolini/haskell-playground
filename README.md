@@ -13,10 +13,10 @@ None of the above are by any means specific of Haskell particularly, or strongly
 * compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness 
 
-The approach will try to bridge theory and practise. From a pragmatic viewpoint, most of the early benefits that can be achieved without an in-depth knowledge of the Haskell syntax are around "reasoning" about the code. Attempts to model the domain precisely in terms of types will force us to think carefully about the domain itself, will surface corner cases even before running the tests, will guide us to make impossible in the code scenarios that should never occur in reality but that a badly designed code might still make possible to happen for mistake at runtime. 
+The approach in this repo will try to bridge theory and practise. From a pragmatic viewpoint, most of the early benefits that can be achieved without an in-depth knowledge of the Haskell syntax are around "reasoning" about the code. Attempts to model the domain precisely in terms of types will force us to think carefully about the domain itself, will surface corner cases even before running the tests, will guide us to make impossible in the code scenarios that should never occur in reality but that a badly designed code might still make possible to happen for mistake at runtime. 
 
 The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though.
-Towards the final chapters, we will see how libraries like `servant` will allow us to design a fully-typed API contract (at the type level!) and generate server, client and documentation from that description. This will also allow us to use PBT (eg, `servant-quickcheck`) to proof strong properties of our server (eg, it should never return 500). 
+Towards the final chapters, we will see how libraries like `servant` will allow us to design a fully-typed API contract (at the type level!) and generate server, client and documentation from that description. This will also allow us to use PBT (eg, `servant-quickcheck`) to establish strong properties of our server (eg, it should never return 500). 
 
  
 ## Motivations to FP
