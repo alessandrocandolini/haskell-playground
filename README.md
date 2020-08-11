@@ -1,19 +1,23 @@
 # haskell-playground
 
-Collection of small projects to explore conceptually and practically a number of basic topics in Haskell, particularly: 
+A tour of some basic topics in strongly statically-typed purely functional programming, illustrated using the Haskell programming language, particularly with emphasis on: 
 * type-driven business and domain modelling (eg, through ADTs and pure functions, but not only), from a naive to a more structural type-informed approach
-* strengths of polymorphic design (eg, theorems for free), including both parametric as well as ad-hoc polymorphism (the latter via type classes)
-* stronger specifications
-* principled and lawful abstractions
-* basics of type level programming 
+* strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural polymorphism
+* how to reason in terms of stronger specifications
+* principled and lawful abstractions (eg, monadic laws, but not only)
+* basics of type-level programming 
 
-None of the above are by any means specific of Haskell or strongly statically typed FP only, and most of the approaches, ways of thinking and problem solving strategies illustrated here can be (at least conceptually) ported (to some degree) to other languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suitable to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
+None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported ((at least conceptually, at least to some extend) to other programming languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suitable to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
 * property based testing (PBT)
 * compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness 
 
-The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though. 
+The approach will try to bridge theory and practise. From a pragmatic viewpoint, most of the early benefits that can be achieved without an in-depth knowledge of the Haskell syntax are around "reasoning" about the code. Attempts to model the domain precisely in terms of types will force us to think carefully about the domain itself, will surface corner cases even before running the tests, will guide us towards making impossible in the code scenarios that should never occur but that a badly designed code might still generate at runtime. 
 
+The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though.
+Towards the final chapters, we will see how libraries like `servant` will allow us to design a fully-typed API contract (at the type level!) and generate server, client and documentation from that description. This will also allow us to use PBT (eg, `servant-quickcheck`) to proof strong properties of our server (eg, it should never return 500). 
+
+ 
 ## Motivations to FP
 
 My assumption: 
