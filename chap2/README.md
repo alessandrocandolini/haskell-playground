@@ -9,3 +9,4 @@ This chapter is mostly theoretical. It will build some concepts that we will lev
 4. The Haskell built-in list and some syntactic sugar 
 5. Strings as [Char] 
 6. More PBT on all these function properties (an exercise in looking for stronger properties and stronger specifications) 
+7. Preview of what's next: lifting a function to a context and the Functor type class (but we have not discussed type classes yet, so this is just a preview of the directon we want to take)
