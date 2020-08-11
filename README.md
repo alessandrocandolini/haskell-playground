@@ -7,7 +7,7 @@ A tour of some basic topics in strongly statically-typed purely functional progr
 * principled and lawful abstractions (eg, monadic laws, but not only)
 * basics of type-level programming 
 
-None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported ((at least conceptually, at least to some extend) to other programming languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suitable to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
+None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported (at least conceptually, at least to a certain degree) to other programming languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suited to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
 * property based testing (PBT)
 * compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness 
