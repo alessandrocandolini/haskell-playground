@@ -6,8 +6,9 @@ A tour of some basic topics in strongly statically-typed purely functional progr
 * how to reason in terms of stronger specifications
 * principled and lawful abstractions (eg, monadic laws, but not only)
 * basics of type-level programming 
+* advantages of modelling effects as values; description vs interpretation (aka runtime execution) of effects; sequential effects in a lazy language and how to bake an IO monad 
 
-None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported (at least conceptually, at least to a certain degree) to other programming languages too. Well-designed strongly statically typed purely functional languages like Haskell are particularly suited to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
+None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported (at least conceptually, at least to a certain degree) to other programming languages too. Not just that: several of these ideas are (slowly) percolating to more mainstream languages (eg, kotlin, swift, even Java has started to adopt some functional concepts, although their realisation in Java is probably questionable from a more purist viewpoint). Well-designed strongly statically typed purely functional languages like Haskell are particularly suited to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
 * property based testing (PBT)
 * compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness 
