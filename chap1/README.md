@@ -5,7 +5,7 @@ Topics:
 1. Setup a new project using stack (https://docs.haskellstack.org/en/stable/README/)
 2. Intro to the project structure: cabal file, stanzas; `app`, `test` and `src` folders; short intro to Haskell modules (bare minimum to understand the strcuture of the generated project, for now)
 3. Cabal: add libraries (eg, tasty for tests; Text for text) 
-4. What are tyoes? Toy model of types as mathematical sets (naive, imprecise model) 
+4. What are types? Toy model of types as mathematical sets (naive, imprecise model) 
    * cardinality of types 
    * examples of simple sets with finite cardinality (eg, set of 0 elements, set of 1 element, set of 2 elements, etc)
 5. Functions between types as mathematical functions between sets; the set (ie, type) of all functions from (type/set) A to (type/set) B
