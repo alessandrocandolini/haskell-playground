@@ -7,8 +7,6 @@ A touristic tour in the land of strongly statically-typed purely functional prog
 * principled and lawful abstractions (eg, monadic and other "category theory inspired" laws, but not only)
 * having fun with type-level programming (moderately :D )
 * practical advantages of modelling effects as values; description vs interpretation (aka runtime execution) of effects; challenges with implementing sequential effects in a lazy language and how to bake an IO monad and how to use is more generally to express side-effectful code in FP
-* maybe something about DSLs if I will ever time to write this part
-* some of the things that can look frustrating in Haskell 
 
 None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported (at least conceptually, at least to a certain degree) to other programming languages too. Not just that: several of these ideas are (slowly) percolating to more mainstream, industrial, and primarily imperative languages (eg, kotlin, swift); even Java has started to adopt some functional concepts (although their realisation in Java is probably questionable from a more purist viewpoint). Well-designed strongly statically typed purely functional languages like Haskell are particularly suited to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
 * property based testing (PBT)
