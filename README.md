@@ -13,7 +13,7 @@ None of the above are by any means specific of Haskell particularly, or strongly
 * compiler as a mathematical verifier, to various degrees (from basic types to eg liquid Haskell)
 * propositon as types, and formal proof of correctness (we are not gonna be talking about formal methods in this context, but if you are familiar with Scala you might be interested in this other playground https://github.com/alessandrocandolini/stainless-playground ) 
 
-No previous knowledge of Haskell or stringly statically typed FP is needed, the material is self-contained and starts from scratch. 
+No previous knowledge of Haskell or FP is needed, the material is self-contained and starts from scratch. 
 The approach is to try to bridge theory and practise. From a pragmatic viewpoint, most of the early benefits that can be achieved without an in-depth knowledge of the Haskell syntax are around "reasoning" about the code. Attempts to model the domain precisely in terms of types will force us to think carefully about the domain itself, will surface corner cases even before running the tests, will guide us to make impossible in the code scenarios that should never occur in reality but that a badly designed code might still make possible to happen for mistake at runtime. 
 
 The repo will walk through a number of examples, some particularly trivial, some hopefully a bit more advanced, the material is meant to be quite introductory though.
