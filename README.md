@@ -1,11 +1,11 @@
-# haskell-playground
+# A taste of Haskell 
 
 A touristic tour in the land of strongly statically-typed purely functional programming, using the Haskell programming language, with emphasis on: 
 * type-driven business and domain modelling (eg, through ADTs and pure functions, but not only), from a naive to a more structural type-informed approach
 * strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural (ie, the `generics` Haskell extension) polymorphism
 * how to reason in terms of stronger specifications
 * principled and lawful abstractions (eg, monadic and other "category theory inspired" laws, but not only)
-* fun with type-level programming 
+* having fun with type-level programming (moderately :D )
 * practical advantages of modelling effects as values; description vs interpretation (aka runtime execution) of effects; challenges with implementing sequential effects in a lazy language and how to bake an IO monad and how to use is more generally to express side-effectful code in FP
 
 None of the above are by any means specific of Haskell particularly, or strongly statically typed FP in general; indeed, most of the ideas, ways of thinking and problem solving strategies described here can be ported (at least conceptually, at least to a certain degree) to other programming languages too. Not just that: several of these ideas are (slowly) percolating to more mainstream, industrial, and primarily imperative languages (eg, kotlin, swift); even Java has started to adopt some functional concepts (although their realisation in Java is probably questionable from a more purist viewpoint). Well-designed strongly statically typed purely functional languages like Haskell are particularly suited to deal with those topics though (ie, the "ergonomics" is superior). Strongly statically typed FP is also well-suited for a number of increasingly in-demand approaches to software correctness, including (but not limited to): 
