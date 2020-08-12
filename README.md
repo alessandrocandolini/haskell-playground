@@ -22,7 +22,7 @@ Towards the final chapters, we will see how libraries like `servant` will allow 
  
 ## Motivations to FP
 
-Imprecisely speaking, imperative programming is an approach of writing code that emphatise an *operational* thinking. The code resolves to a sequence of commands/actions/statements tp be executed. The behaviour of the software is encoded in a number of instructions, that once executed are supposed to produce the correct result in the end (not necessary in a given order; not necessarily sequentially; parallelism and concurrency are also possible). We tell the program exactly what to do, by defining steps: "do this", "do that" . 
+Imprecisely speaking, imperative programming is an approach of writing code that emphatise an *operational* thinking. The code resolves to a sequence of commands/actions/statements to be executed. The behaviour of the software is encoded in a number of instructions, that once executed are supposed to produce the correct result. In other words, we tell the program exactly what to do, by defining steps: "do this", "do that" . 
 
 If you look at each instruction individually, locally, the instruction typically make sense, it's clear, easy to read, easy to implement, easy to teach. 
 The problem is when it comes to understand the non-local implications of that local choice. 
