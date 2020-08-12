@@ -24,9 +24,10 @@ Towards the final chapters, we will see how libraries like `servant` will allow 
 
 Imprecisely speaking, imperative programming is an approach of writing code that emphatise an *operational* thinking. The code resolves to a sequence of commands/actions/statements to be executed. The behaviour of the software is encoded in a number of instructions, that once executed are supposed to produce the correct result. In other words, we tell the program exactly what to do, by defining steps: "do this", "do that" . 
 
-If you look at each instruction individually, locally, the instruction typically make sense, it's clear, easy to read, easy to implement, easy to teach. 
-The problem is when it comes to understand the non-local implications of that local choice. 
+If you look at each instruction individually, locally, the instruction typically make sense. The single instruction per se looks clear, easy to read, easy to implement, easy to understand what's going on, easy to code, easy to teach. 
+The problem comes when we want/need to understand the non-local implications of the local choices. 
 Operational thinking does not allow local reasoning. 
+That's where the interpretation of the code becomes less trivial. 
 Each local instruction has to be contextualise, you need to have  typically the steps that happened before and how this instruction will influence the steps after. 
 It's complicated to get the full picture just by looking at the local instructions individually. 
 
