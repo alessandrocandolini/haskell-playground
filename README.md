@@ -3,7 +3,7 @@
 # A taste of Haskell 
 
 A touristic tour in the land of strongly statically-typed purely functional programming, using the Haskell programming language, with emphasis on: 
-* type-driven development, business, domain and system modelling through types, and usage of the types to explore the model and reason about it (eg, through ADTs and pure functions, but not only)
+* the alchemy of types: Haskell is a furnace of types, it's a great laboratory to learna about type-driven development, how to do business, domain and system modelling through types, and how to use types to explore the resulting model and to reason about it (eg, through ADTs and pure functions, but not only)
 * strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural (ie, the `generics` Haskell extension) polymorphism
 * how to reason in terms of stronger specifications
 * principled and lawful abstractions (eg, monadic and other "category theory inspired" laws, but not only)
