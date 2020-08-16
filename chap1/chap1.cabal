@@ -3,14 +3,6 @@ name:           chap1
 version:        0.1.0.0
 build-type:     Simple
 
-extra-source-files:
-    README.md
-    ChangeLog.md
-
-source-repository head
-  type: git
-  location: https://github.com/githubuser/chap1
-
 -- nice trick https://cabal.readthedocs.io/en/latest/cabal-package.html#common-stanzas
 common deps
   build-depends:
