@@ -11,9 +11,9 @@ This chapter is mostly theoretical. It will build some concepts that we will lev
 6. More PBT on all these function properties (an exercise in looking for stronger properties and stronger specifications) 
 7. Preview of what's next: lifting a function to a context and the Functor type class (but we have not discussed type classes yet, so this is just a preview of the directon we want to take)
 
-## Parametrized ADTs
+## Polymorphic ADTs
 
-In the first chapter we have seen how to construct simple ADTs, for example purely additive ADTS
+In the first chapter we have seen how to construct arbitrary *monomorphic algebraic data types* (ie, ADTs), eg *additive* ADTs like 
 ```
 data Spin = Up | Down 
 data Colour = Red | Green | Blue 
@@ -21,21 +21,34 @@ data CardinalPoints = North | South | East | West
 ...
 ```
 
-how to construct purely multiplicative types, eg 
+or *multiplicative* ADTs (which are isomorphic to tuples, tuples are anonymous multiplicative types) like 
 ```
 data User = User String String 
 ```
-(isomorphic to tuples, that are anonymous multiplicative types), and a mixed of them 
+or the more general case like 
 ```
 data Customer = User String String | Company String Int 
 data ValidateUserResult = FirstNameMissing | LastNameMissing | InvalidAge | Success User 
 ```
+I've omitted `deriving (Eq,Show) etc` from all the definitions of these types to remove noise, but at a practical level we almost always want to define them to be instance of `Eq` and `Show` type classes (so we can write tests for them)
 
-This allows us to build types from other types. In all these examples, the types are built on top of existing, specific types. 
+ADTs are a powerful way to construct new types starting from other types. Notice that types like `Spin` above are *isomorphic* to `Bool`. Mathematically, they can "naively" be modelled by a set of two and only two distinct elements (ie, a set of cardinality 2)
 
-Here we are going to consider ADTS that are parametrically polymorphic, eg
+In this chapter we are going to consider ADTS that are parametrically polymorphic, eg taking one or more type variables 
 ```
 data Optional a = None | Some a
 ```
-where `a` is a type variable
+where `a` is a type variable. For each `a`, `Optional a` defined a different type (eg, `Optional Int` is a different type that `Optional String` or `Optional Bool`). `Optional` itself is NOT a type (it's a type constructor), for each type `a` it creates a new type called `Optional a`. 
+
+## Recursive ADTs
+
+A simple monomorphic example of a recursively defined ADT is a type modelling the json format specification. A json value is defined to be either one of the four primitive json types (ie, bool, string, number and null) or one of two composite json types (ie, json object and json array, the former being a key-value map/dictionary of keys described by strings and values descrived by any json, the latter being an array of arbitrary json values). It can be represented as 
+```
+data JsValue = JsNull | JsBool Bool | JsString String | JsNumber Double | JsObject Map String JsValue | JsArray [JsValue] 
+```
+
+The prototypical example of a polymorphic, recursively defined ADT is the list type
+```
+data MyList a = Empty | NonEmpty a (MyList a)
+```
 
