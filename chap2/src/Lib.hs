@@ -25,6 +25,7 @@ myconcat (MyNonEmpty a b)  l @ (MyNonEmpty _ _)  = MyNonEmpty a (myconcat b l)
 
 myfilter' :: (a -> Bool) -> MyList a -> MyList a 
 myfilter' _ MyEmpty = MyEmpty
-myfilter' p (MyNonEmpty h t) = myconcat (filtered p h) (myfilter' p t) where
-        filtered p' a | p' a = MyNonEmpty a MyEmpty
-        filtered _ _ = MyEmpty 
+myfilter' p (MyNonEmpty h t) = myconcat (filtered p h) (myfilter' p t) 
+        where
+          filtered p' a | p' a = MyNonEmpty a MyEmpty
+          filtered _ _ = MyEmpty 

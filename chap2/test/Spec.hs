@@ -9,6 +9,9 @@ import Lib
 prop_filter_idempotent:: Fun Int Bool -> [Int] -> Bool
 prop_filter_idempotent (Fun _ p) l = filter p (filter p l) == filter p l  
 
+prop_filter_idempotent2:: Fun Int Bool -> [Int] -> Bool
+prop_filter_idempotent2 (Fun _ p) l = (filter p . filter p) l == filter p l  
+
 prop_filter_empty:: Fun Int Bool -> [Int] -> Bool
 prop_filter_empty (Fun _ p) l = filter p l1 == [] where
         l1 = filter (not . p) l
