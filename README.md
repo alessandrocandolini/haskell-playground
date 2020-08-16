@@ -1,3 +1,5 @@
+[![Simple Haskell](https://www.simplehaskell.org/badges/badge.svg)](https://www.simplehaskell.org)
+
 # A taste of Haskell 
 
 A touristic tour in the land of strongly statically-typed purely functional programming, using the Haskell programming language, with emphasis on: 
