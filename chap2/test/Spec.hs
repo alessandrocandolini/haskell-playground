@@ -23,6 +23,4 @@ prop_map_length_preserving :: Fun Int String -> [Int] -> Bool
 prop_map_length_preserving (Fun _ f) l = length (map f l) == length l
 
 prop_map_composition :: Fun Int String -> Fun String Int -> [Int] -> Bool
-prop_map_composition (Fun _ f) (Fun _ g) l = map g (map f l) == map h l where 
-    h :: Int -> Int     
-    h = g.f
+prop_map_composition (Fun _ f) (Fun _ g) l = map g (map f l) == map (g.f) l 
