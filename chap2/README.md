@@ -11,7 +11,9 @@ This chapter is mostly theoretical. It will build some concepts that we will lev
 6. More PBT on all these function properties (an exercise in looking for stronger properties and stronger specifications) 
 7. Preview of what's next: lifting a function to a context and the Functor type class (but we have not discussed type classes yet, so this is just a preview of the directon we want to take)
 
-## Polymorphic ADTs
+## More general ADTs
+
+### Polymorphic non recursive ADTs
 
 In the first chapter we have seen how to construct arbitrary *monomorphic algebraic data types* (ie, ADTs), eg *additive* ADTs like 
 ```
@@ -40,15 +42,18 @@ data Optional a = None | Some a
 ```
 where `a` is a type variable. For each `a`, `Optional a` defined a different type (eg, `Optional Int` is a different type that `Optional String` or `Optional Bool`). `Optional` itself is NOT a type (it's a type constructor), for each type `a` it creates a new type called `Optional a`. 
 
-## Recursive ADTs
+### Monomorphic recursive ADTs
 
 A simple monomorphic example of a recursively defined ADT is a type modelling the json format specification. A json value is defined to be either one of the four primitive json types (ie, bool, string, number and null) or one of two composite json types (ie, json object and json array, the former being a key-value map/dictionary of keys described by strings and values descrived by any json, the latter being an array of arbitrary json values). It can be represented as 
 ```
 data JsValue = JsNull | JsBool Bool | JsString String | JsNumber Double | JsObject Map String JsValue | JsArray [JsValue] 
 ```
 
+### Polymorphic recursive ADTs
 The prototypical example of a polymorphic, recursively defined ADT is the list type
 ```
 data MyList a = Empty | NonEmpty a (MyList a)
 ```
+
+(Similar examples are : trees, stacks, etc)
 
