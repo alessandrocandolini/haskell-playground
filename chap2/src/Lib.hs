@@ -17,4 +17,14 @@ myfilter p (MyNonEmpty head tail)
   | p head = MyNonEmpty head (myfilter p tail) 
   | otherwise =  myfilter p tail
 
+myconcat :: MyList a -> MyList a -> MyList a 
+myconcat MyEmpty MyEmpty = MyEmpty
+myconcat l @ (MyNonEmpty _ _ ) MyEmpty = l 
+myconcat MyEmpty l @ (MyNonEmpty _ _ ) = l 
+myconcat (MyNonEmpty a b)  l @ (MyNonEmpty _ _)  = MyNonEmpty a (myconcat b l)
 
+myfilter' :: (a -> Bool) -> MyList a -> MyList a 
+myfilter' _ MyEmpty = MyEmpty
+myfilter' p (MyNonEmpty h t) = myconcat (filtered p h) (myfilter' p t) where
+        filtered p' a | p' a = MyNonEmpty a MyEmpty
+        filtered _ _ = MyEmpty 

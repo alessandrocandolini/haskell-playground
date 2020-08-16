@@ -42,6 +42,7 @@ test-suite chap2-test
   other-modules:
       Paths_chap2
       Spec
+      Spec2
   hs-source-dirs:
       test
   build-depends:
