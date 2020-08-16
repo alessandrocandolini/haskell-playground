@@ -4,7 +4,6 @@ import Test.Tasty.QuickCheck
 import Test.Tasty.HUnit
 import Lib
 
-
 unit_myconcat = myconcat x y @?=  z where 
   x :: MyList Integer
   x = MyNonEmpty 2 MyEmpty

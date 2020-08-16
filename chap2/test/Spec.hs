@@ -13,8 +13,7 @@ prop_filter_idempotent2:: Fun Int Bool -> [Int] -> Bool
 prop_filter_idempotent2 (Fun _ p) l = (filter p . filter p) l == filter p l  
 
 prop_filter_empty:: Fun Int Bool -> [Int] -> Bool
-prop_filter_empty (Fun _ p) l = filter p l1 == [] where
-        l1 = filter (not . p) l
+prop_filter_empty (Fun _ p) l = null ((filter p . (filter (not . p))) l ) 
 
 prop_map_identity:: [Int] -> Bool
 prop_map_identity l = map myIdentity l == l 
