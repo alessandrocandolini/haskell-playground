@@ -1,4 +1,4 @@
-# chap1
+# Chap1 - pure functions, monomorphic algebraic data types 
 
 Topics:
 
