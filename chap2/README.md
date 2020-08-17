@@ -1,4 +1,4 @@
-# chap2
+# Chap2: parametric polymorphism and ADTs
 
 This chapter is mostly theoretical. It will build some concepts that we will leverage later: 
 1. How to model optional types using parametrically polymorphic ADTs: the Maybe data type 
