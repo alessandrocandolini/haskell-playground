@@ -4,12 +4,16 @@ This chapter is mostly theoretical. It will build some concepts that we will lev
 1. How to model optional types using parametrically polymorphic ADTs: the Maybe data type 
 2. Simple functions on optional types (an exercise in pattern matching) 
 2. Exaustive representation of the Json format specification using ADTs, as an example of recursive ADTs
-2. Define a linked-list data structure using recursive (parametrically polymorphic) ADTs 
+2. Define a singly linked-list data structure using recursive (parametrically polymorphic) ADTs 
 3. Simple (recursive) functions on lists 
 4. The Haskell built-in list and some syntactic sugar 
 5. Strings as [Char] 
 6. More PBT on all these function properties (an exercise in looking for stronger properties and stronger specifications) 
 7. Preview of what's next: lifting a function to a context and the Functor type class (but we have not discussed type classes yet, so this is just a preview of the directon we want to take)
+
+
+Remark: from a practical viewpoint, the `Maybe` type is really helpful to describe optional types. The usefulnes of the `List` type instead is limited. Nevertheless, from a didactic perspective, a `List` is a good laboratory to play around with basic stuff and introduce ideas that will be generalised later (eg, functors, foldable, traversable, etc). For a remark on the usage of singly linked list in Haskell, read https://arxiv.org/pdf/1808.08329.pdf
+
 
 ## More general ADTs
 
