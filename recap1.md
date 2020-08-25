@@ -94,6 +94,6 @@ Option 2:
 data NonEmptyList a = NonEmptyList a [a]
 
 head :: NonEmptyList a -> a 
-head (NonEmptyList head _) = head 
+head (NonEmptyList h _) = h 
 
 ```
