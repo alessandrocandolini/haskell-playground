@@ -60,7 +60,7 @@ Option -1:
 head :: [Int] -> Int
 
 head [] = -1 -- very bad idea , using values to describe error / invalid scenarios , because there are indistinguishable from happy path cases  
-head (head : _) = head 
+head (h : _) = h 
 
 ```
 
@@ -72,7 +72,7 @@ Option 0 : exceptions, ie, enriching the output set, but in a type unsafe way (e
 head :: [a] -> a
 
 head [] = ??? -- throwing ?!
-head (head : _) = head 
+head (h : _) = h 
 
 ```
 
@@ -82,7 +82,7 @@ realising that the signature is not appropriate, it's a lie, i can't pretend to 
 head :: [a] -> Maybe a 
 
 head [] = Nothing 
-head (head : _) = Just head 
+head (h : _) = Just h 
 
 ```
 This is type safe. 
@@ -97,3 +97,14 @@ head :: NonEmptyList a -> a
 head (NonEmptyList h _) = h 
 
 ```
+
+
+## Lifting functions 
+
+```
+f :: a -> b
+
+map:: (a -> b) -> ([a] -> [b])
+```
+
+We focus on the building blocks (ie, a function from `a` to `b`, this is the part specific of the domain) and then you can rely on functions like `map` (and other ones) to "promote" that function to automatically be also a function between `[a] -> [b]`, `Maybe a -> Maybe b`, `Set a -> Set b`, etc
