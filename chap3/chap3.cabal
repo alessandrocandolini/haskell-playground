@@ -11,7 +11,7 @@ common deps
   ghc-options: -fwarn-incomplete-patterns -fno-warn-name-shadowing
     -fwarn-unused-binds -fwarn-unused-imports
   default-language: Haskell2010
-  default-extensions: 
+  default-extensions: OverloadedStrings 
 
 library
   import: deps 
