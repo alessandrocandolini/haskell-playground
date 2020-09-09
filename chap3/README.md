@@ -2,7 +2,7 @@
 
 ## Motivation: parametric vs ad-hoc polymorphism 
 
-So far we have lenghtly discusses what is called *parametric polymorphism*. If you look at definitions of data types like  
+So far we have lenghtly discussed what is *parametric polymorphism*. To quickly recap by example, let's look again at definitions of data types like  
 ```
 data Maybe a = Nothing | Just a 
 ```
