@@ -6,7 +6,7 @@ A touristic tour in the land of strongly statically-typed purely functional prog
 * the alchemy of types: Haskell is a furnace for types, it's a great laboratory to experiment with type-driven development, to learn more how to do business & domain modelling through types, and how to leverage types to reason about problems and to extract properties of a system (eg, through ADTs and pure functions, but not only)
 * strengths of polymorphic design (eg, theorems for free), including parametric, ad-hoc (via type classes) and structural (eg, the `generics` Haskell extension) polymorphism
 * how to reason in terms of stronger specifications
-* principled and lawful abstractions (eg, monadic, applicative, and other "category theory inspired" laws, but not only)
+* principled and lawful abstractions (eg, monadic, applicative, and other "category theory inspired" mathematical laws, but not only)
 * having fun with type-level programming (moderately :D )
 * practical advantages of modelling effects as values; description vs interpretation (aka runtime execution) of effects; challenges with implementing sequential effects in a lazy language and how to bake an IO monad and how to use is more generally to express side-effectful code in FP
 
