@@ -2,7 +2,7 @@
 
 ## Motivation: parametric vs ad-hoc polymorphism 
 
-So far we have lenghtly discussed what is *parametric polymorphism*. To quickly recap by example, let's look again at definitions of data types like  
+So far we have lenghtly discussed what is *parametric polymorphism*. To quickly recap, let's look again at definitions of data types like  
 ```
 data Maybe a = Nothing | Just a 
 ```
@@ -16,7 +16,7 @@ length :: [a] -> Integer
 map :: ( a -> b ) -> [a] -> [b]
 filter :: ( a -> Bool ) -> [a] -> [a] 
 ```
-those definitions are parametrised over arbitrary type variables (eg, `a` , `b`, etc). It does not matter what the actual type will be, for all types the implementation will be exactly the same. We can define/implement it once, and apply it to any arbitrary type. The definition/implementation is shared across all the types. 
+Those definitions are parametrised over arbitrary type variables (eg, `a` , `b`, etc). It does not matter what the actual type will be, for all types the implementation will be exactly the same. We can define/implement it once, and apply it to any arbitrary type. The definition/implementation is shared across all the types. 
 
 Consider instead functions like structural equality 
 ```
