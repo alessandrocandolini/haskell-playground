@@ -62,7 +62,7 @@ TBC
 
 The following section does not aim at being comprehensive. It's to suggest some readings that i find particularly inspiring. 
 
-It's a pleasure to read the original paper from Philip Wadler, it's a highly recommended superb paper, it's freely available on the web, eg you can check this address: 
+It's a pleasure to read the original paper from Philip Wadler & Stephen Blott "how to make ad-hoc polymorphism less ad hoc" (1998) where type classes where first proposed. It's a highly recommended superb paper, it's downloadable eg from: 
 * https://people.csail.mit.edu/dnj/teaching/6898/papers/wadler88.pdf
 
 The work of Simon Peyton Jones, Mark Jones and Erik Meijer (one of my heros!) in "Type Classes: An Exploration of the Design Space" (1997) is also quite inspirational despite being written more than 20 years ago: 
