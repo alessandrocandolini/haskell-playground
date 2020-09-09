@@ -40,9 +40,23 @@ is clearly not the same as structural equality between Chars, Integers etc
 
 In addition, there are types for which functions like `isEqual` don't have a meaningful implementation (not in Haskell at least), eg, what would be `isEqual` for a function type?
 
-We need a way to link a polymorphic type signature to the actual implementation of that function for some specific type. We need to find a way to say that `isBoolEqual` provides an implementation of `isEqual` when the type is `Bool`. We need to find a away to express the fact that a type is equipped with certain functions, ie, that certain functions are made available for it. 
+We need a way to link a polymorphic type signature to the actual implementation of that function for some specific type. We need to find a way to say that `isBoolEqual` provides an implementation of `isEqual` when the type is `Bool`. 
 
-In OOP this is typically achieved by using sub typing: the method is added to a basic class, and all classes that inherits from it can provide their customised implementation (eg, if you are familiar with Java, every `Object` has a method `equals` and at runtime the one corresponding to the particular class is picked up). The downside of this approach is that it's not type safe. 
+Conversely, sometimes we want to find a way to extract and express the fact that a moltitude of ad-hoc, monomorphic functions share a common structure (although the details of the implementation differs). For example, the following functions 
+```
+mapMaybe :: (a->b) -> Maybe a -> Maybe b 
+mapMaybe _ Nothing = Nothing 
+mapMaybe f (Maybe a) = Just (f a) 
+```
+and 
+```
+mapList :: (a->b) -> List a -> List b 
+mapMaybe _ [] = [] 
+mapMaybe f (head:tail) = (f head) : (mapList f tail) 
+```
+have clearly a common structure, they "lift" a fully polymorphic function `a->b` to a function `Maybe a -> Maybe b` and `List a -> List b` respectively. Is there a way in which we can "group together" under the same umbrella those two functions (and other ones following a similar structure/pattern)? Is there a way to highlight and encode the commonalities between these implementations? 
+
+The general topic in OOP is typically addressed by using sub-typing and virtual functions dispatching: the method is added to a basic class, and all classes that inherits from it can provide their customised implementation (eg, if you are familiar with Java, every `Object` has a method `equals` and at runtime the one corresponding to the particular class is picked up). The downside of this approach is that it's not type safe. 
 
 In Haskell, parametric polymorphism is deeply rooted in the Hindley-Milner type system (which gives astonishing, non-local type inference on generic types); ad-hoc polymorphism is achieved by extending the Hindley-Milner type system with **type classes**. 
 
