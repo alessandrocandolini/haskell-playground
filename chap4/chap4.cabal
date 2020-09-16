@@ -9,16 +9,19 @@ common deps
   build-depends:
       base >=4.7 && <5,
       text,
-      time 
+      time
   ghc-options: -Wall 
   default-language: Haskell2010
   default-extensions: 
-    OverloadedStrings
+    OverloadedStrings,
+    --GeneralisedNewtypeDeriving
 
 library
   import: deps 
   exposed-modules:
-      Lib
+      Lib,
+      User,
+      Product
   other-modules:
       Paths_chap4
   hs-source-dirs:
