@@ -16,18 +16,18 @@ length :: [a] -> Integer
 map :: ( a -> b ) -> [a] -> [b]
 filter :: ( a -> Bool ) -> [a] -> [a] 
 ```
-Those definitions are parametrised over arbitrary type variables (eg, `a` , `b`, etc). It does not matter what the actual type will be, for all types the implementation will be exactly the same. We can define/implement it once, and apply it to any arbitrary type. The definition/implementation is shared across all the types. 
+Those definitions are parametrised over arbitrary type variables (eg, `a` , `b`, etc). It does not matter what the actual type will be, **for all** types the implementation will be exactly the same. We can define/implement it once, and apply it to any arbitrary type. The definition/implementation is shared across all the types. 
 
-Consider instead functions like structural equality 
+Consider instead functions like *structural equality*, ie, 
 ```
 isEqual :: a -> a -> Bool 
 ```
 or some "generic" function to serialise/deserialise to/from json 
 ```
-fromJson :: Json -> Option[a]
-toJson :: a -> Json 
+fromJson :: JsValue -> Maybe a 
+toJson :: a -> JsValue 
 ```
-Although the signature and the general idea of these functions can be stated for arbitrary types, the actual implementation differs for each actual type. This is called *ad hoc polymorphism*, because although the signature reads polymorphic, the actual implementation is custom for each specific type. 
+Although the signature and the general idea of these functions can be stated for arbitrary types, the actual implementation differs for each individual type. This is called *ad hoc polymorphism*, because although the signature reads polymorphic, the actual implementation is custom for each specific type. 
 
 For example, structural equality between `Bool`s, namely
 ```
