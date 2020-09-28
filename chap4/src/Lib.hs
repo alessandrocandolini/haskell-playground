@@ -6,8 +6,8 @@ someFunc :: IO ()
 someFunc = putStrLn "someFunc"
 
 
-canBuyAlcohol :: Age -> Bool 
-canBuyAlcohol age = age >= threshold where 
-        threshold = Age 18
+canBuyAlcohol :: Age -> Age -> Bool 
+canBuyAlcohol threshold age = age >= threshold 
 
-
+canBuyAlcoholEurope :: Age -> Bool
+canBuyAlcoholEurope = canBuyAlcohol (Age 18)
