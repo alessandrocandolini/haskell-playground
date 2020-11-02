@@ -43,13 +43,11 @@ test-suite chap4-test
   type: exitcode-stdio-1.0
   main-is: Drivers.hs
   other-modules:
-      Paths_chap4,Spec
+      LibSpec,
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
      chap4,
-     tasty,
-     tasty-hunit,
-     tasty-quickcheck,
-     tasty-discover
+     hspec,
+     hspec-discover,

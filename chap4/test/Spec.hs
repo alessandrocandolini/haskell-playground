@@ -1,12 +1,15 @@
 module Spec where 
 
-import User
-import Lib
-import Test.Tasty
-import Test.Tasty.HUnit
-import Test.Tasty.QuickCheck
+import Test.Hspec
 
-areEqual = assertEqual ""
+spec :: Spec
+spec = do 
+  describe "absolute" $ do
+    it "returns the original number when given a positive input" $
+      1 `shouldBe` 1
 
-unit_canBuyAlcohol= areEqual True ( canBuyAlcoholEurope (Age 20) )
-unit_cannotBuyAlcohol= areEqual False ( canBuyAlcoholEurope (Age 5) )
+    it "returns a positive number when given a negative input" $
+      -(-1) `shouldBe` 1
+
+    it "returns zero when given zero" $
+      -0 `shouldBe` 0
