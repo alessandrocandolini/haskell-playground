@@ -10,4 +10,19 @@ Let's try to write some code on top of a simple usecase: age limit to purchase a
 * we don't care at this stage where the input data is coming from; we just express the fact that we must have such data in order to process (ie, evaluate) the business logic 
 
 
+## Rules of thumb
+
+We need to be careful in distinguishing 
+* FP code
+* code that uses FP concepts everywhere but that ultimately is still inspired by an imperative/OOP way of thinking
+
+Examples:
+* abstracting a clock behind a type class suffers the same problems of having an interface modelling your clock 
+* if we use IO all over the place, that does not make our life easier in terms of managing side effects (although IO has superior ergonomics / compositional properties compared to impereative statements) 
+* usage of Bool (and other basic types) instead of modelling our domain appropriately; particularly, abuse of wrapper types instead of constructive modeling
+
+We should use type classes for ad-hoc polymorphism and algebraic lawful abstractions. We should push the usage of IO as much as possible towards the boundaries of our application because once we are in the IO context we can't leave it. We should work with pure functions as much as possible, and lift when needed, instead of writing functions in a already lifted signature; etc
+
+
+
 
